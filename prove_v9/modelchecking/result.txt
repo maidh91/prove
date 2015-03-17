@@ -1,0 +1,16 @@
+[kernel] preprocessing with "gcc -C -E -I.  -dD std_why.c"
+[jessie] Starting Jessie translation
+[jessie] Producing Jessie files in subdir std_why.jessie
+[jessie] File std_why.jessie/std_why.jc written.
+[jessie] File std_why.jessie/std_why.cloc written.
+[jessie] Calling Jessie tool in subdir std_why.jessie
+Generating Why function oddNumber
+[jessie] Calling VCs generator.
+NOT SUPPORT :eq_int_bool 1
+NOT SUPPORT :eq_int_bool 1
+NOT SUPPORT :eq_int_bool 1
+NOT SUPPORT :eq_int_bool 1
+NOT SUPPORT :eq_int_bool 1
+NOT SUPPORT :eq_int_bool 1
+Running REDLOG on proof obligations
+[jessie] user error: Jessie subprocess failed: make -f std_why.makefile redlog

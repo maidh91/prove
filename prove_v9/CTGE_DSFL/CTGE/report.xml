@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="windows-1256"?>
+<bcreport created="10/6/2013 9:22:10 PM">
+	<ltpath></ltpath>
+	<rtpath></rtpath>
+	<filecomparison created="10/6/2013 9:22:10 PM">
+		<filename1>D:\PhD\CTG\src.cpp</filename1>
+		<filename2>D:\PhD\CTG\dst.cpp</filename2>
+		<linecomp status="same">
+			<text ltid="1" rtid="1">int foo(int a, int out)</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="2" rtid="2">{</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="3">	if ((a > 2))</text>
+			<text rtid="3">	if ((a > 4))</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="4" rtid="4">	{</text>
+		</linecomp>
+		<linecomp status="different">
+			<text ltid="5">		out = out + 1;</text>
+			<text rtid="5">		out = out + 100;</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="6" rtid="6">	}</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="7" rtid="7">	else</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="8" rtid="8">	{</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="9" rtid="9">		out = out + 2;</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="10" rtid="10">	}</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="11" rtid="11">	return out;</text>
+		</linecomp>
+		<linecomp status="same">
+			<text ltid="12" rtid="12">}</text>
+		</linecomp>
+	</filecomparison>
+</bcreport>

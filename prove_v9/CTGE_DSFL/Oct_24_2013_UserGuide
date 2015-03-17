@@ -1,0 +1,11 @@
+Step 1 : install wine to run Z3.exe
+
+sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo apt-get update
+sudo apt-get install wine1.4
+
+winetricks vcrun2008
+
+
+Step 2 : Test - Run this command
+z3.exe /h

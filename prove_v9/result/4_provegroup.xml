@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logs>
+  <solution>
+    <logid>1</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>2</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>3</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>4</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>5</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>6</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if(p &amp;lt; 0)&#xD;
+ re = 1;&#xD;
+else if (p&gt;=0 &amp;amp;&amp;amp; p&amp;lt;3)&#xD;
+ re = 2;&#xD;
+else re = 3;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>7</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if(p &amp;lt; 0)&#xD;
+ re = 1;&#xD;
+else if (p&gt;=0 &amp;amp;&amp;amp; p&amp;lt;3)&#xD;
+ re = 2;&#xD;
+else re = 3;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>8</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if(p &amp;lt; 0)&#xD;
+ re = 1;&#xD;
+else if (p&gt;=0 &amp;amp;&amp;amp; p&amp;lt;3)&#xD;
+ re = 2;&#xD;
+else re = 3;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>9</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if(p &amp;lt; 0)&#xD;
+ re = 1;&#xD;
+else if (p&gt;=0 &amp;amp;&amp;amp; p&amp;lt;3)&#xD;
+ re = 2;&#xD;
+else re = 3;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>10</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if (p&gt;0 &amp;amp;&amp;amp; p&amp;lt;3)&#xD;
+ re = 2;&#xD;
+else if(p&gt;=3) &#xD;
+ re = 3;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>11</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if (p%2 == 1 || p%2 == -1)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>Alt-Ergo</prover>
+    <total>4</total>
+    <valid>4</valid>
+    <invalid>0</invalid>
+    <unknown>0</unknown>
+    <timeout>0</timeout>
+    <failure>0</failure>
+    <result>TRUE</result>
+  </solution>
+  <solution>
+    <logid>12</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if (p%2 == -1)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>13</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if (p%2 == -1)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>14</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if (p%2 == -1)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>15</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if (p%2 == -1)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>16</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if (p&amp;lt; -2000)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>17</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if (p&amp;lt; -2000)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>18</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if (p&amp;lt; -2000)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>19</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if (p&amp;lt; -2000)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>20</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+if (p&amp;lt; -2000)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>21</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>22</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>23</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>24</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>25</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>26</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>27</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>28</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>29</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>30</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>31</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>32</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int re = 0;&#xD;
+int a = p;&#xD;
+int b = p + 100;&#xD;
+if( a &gt; 0 &amp;amp;&amp;amp; b &gt; 0)&#xD;
+ re = 1;&#xD;
+return re;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>33</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   int a = 1, b = 2;&#xD;
+if(a&gt;0 &amp;amp;&amp;amp; p&gt;0)&#xD;
+return 1;&#xD;
+return 2;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>34</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p&gt;0)&#xD;
+return p;&#xD;
+return -p;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>35</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p&gt;0)&#xD;
+return p;&#xD;
+return -p;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>36</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p&gt;0)&#xD;
+return p;&#xD;
+return -p;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>37</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p&gt;0)&#xD;
+return p;&#xD;
+return -p;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>38</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p&gt;0)&#xD;
+return p;&#xD;
+return -p;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>39</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p&gt;0)&#xD;
+return p;&#xD;
+return -p;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>40</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   return 1;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>41</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>42</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 1)&#xD;
+return 1;&#xD;
+return 0;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>43</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 1)&#xD;
+return 1;&#xD;
+return 0;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>44</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 1)&#xD;
+return 1;&#xD;
+return 0;&#xD;
+&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>45</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 &amp;amp;&amp;amp; p&gt;3)&#xD;
+return 0;&#xD;
+return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>46</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if((p%2 == 1 || p%2 == -1) &amp;amp;&amp;amp; p&gt;3)&#xD;
+return 0;&#xD;
+return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>47</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if((p%2 == 1) || (p%2 == -1))&#xD;
+return 0;&#xD;
+return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>48</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 0)&#xD;
+return 1;&#xD;
+return 2;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>49</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 0)&#xD;
+return 0;&#xD;
+return 1;&#xD;
+}</code>
+    <prover>Alt-Ergo</prover>
+    <total>3</total>
+    <valid>3</valid>
+    <invalid>0</invalid>
+    <unknown>0</unknown>
+    <timeout>0</timeout>
+    <failure>0</failure>
+    <result>TRUE</result>
+  </solution>
+  <solution>
+    <logid>50</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 0){&#xD;
+  if( p &amp;lt; -3 || p &gt; 5)&#xD;
+  return 0;&#xD;
+else &#xD;
+return 2;&#xD;
+}&#xD;
+return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>51</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 0){&#xD;
+  if( p &amp;lt; -3 || p &gt; 5)&#xD;
+  return 0;&#xD;
+else &#xD;
+return 2;&#xD;
+}&#xD;
+return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>52</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 0){&#xD;
+  if( p &amp;lt; -3 || p &gt; 5)&#xD;
+  return 0;&#xD;
+else &#xD;
+return 1;&#xD;
+}&#xD;
+return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>53</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 != 0){&#xD;
+    return 1;&#xD;
+}&#xD;
+return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>54</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 != 0){&#xD;
+&#xD;
+    return 1;&#xD;
+}&#xD;
+return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>55</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 1){&#xD;
+&#xD;
+    return 1;&#xD;
+}&#xD;
+return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>56</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 1){&#xD;
+&#xD;
+    return 0;&#xD;
+}&#xD;
+return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>57</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+    if (p % 2 == 1 || p % 2 == -1){&#xD;
+	if( p &amp;lt; -3 || p &gt; 5)&#xD;
+		return 1;&#xD;
+    return 0;&#xD;
+}&#xD;
+return 0;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>58</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+    if (p % 2 == 1 || p % 2 == -1){&#xD;
+	if( p &amp;lt; -3 || p &gt; 5)&#xD;
+		return 1;&#xD;
+    return 0;&#xD;
+}&#xD;
+return 0;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>59</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+    if (p % 2 == 1 || p % 2 == -1){&#xD;
+	if( p &amp;lt; -3 || p &gt; 5)&#xD;
+		return 1;&#xD;
+    return 0;&#xD;
+}&#xD;
+return 0;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>60</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+    if (p % 2 == 1 || p % 2 == -1){&#xD;
+	if( p &amp;lt; -3 || p &gt; 5)&#xD;
+		return 1;&#xD;
+    return 0;&#xD;
+}&#xD;
+return 0;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>61</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+    if (p % 2 == 1 || p % 2 == -1){&#xD;
+	if( p &amp;lt; -3 || p &gt; 5)&#xD;
+		return 1;&#xD;
+    return 0;&#xD;
+}&#xD;
+return 0;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>62</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+    if (p % 2 == 1 || p % 2 == -1){&#xD;
+	if( p &amp;lt; -3 || p &gt; 5)&#xD;
+		return 1;&#xD;
+    return 0;&#xD;
+}&#xD;
+return 0;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>63</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+    if (p % 2 == 1 || p % 2 == -1){&#xD;
+	if( p &amp;lt; -3 || p &gt; 5)&#xD;
+		return 1;&#xD;
+    return 0;&#xD;
+}&#xD;
+return 0;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>64</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+    if (p % 2 == 1 || p % 2 == -1){&#xD;
+	if( p &amp;lt; -3 || p &gt; 5)&#xD;
+		return 1;&#xD;
+    return 0;&#xD;
+}&#xD;
+return 0;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>65</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+    if (p % 2 == 1 || p % 2 == -1){&#xD;
+	if( p &amp;lt; -3 || p &gt; 5)&#xD;
+		return 1;&#xD;
+    return 0;&#xD;
+}&#xD;
+return 0;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>66</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+    if (p % 2 == 1 || p % 2 == -1){&#xD;
+	if( p &amp;lt; -3 || p &gt; 5)&#xD;
+		return 1;&#xD;
+    return 0;&#xD;
+}&#xD;
+return 0;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>67</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+    if (p % 2 == 1 || p % 2 == -1){&#xD;
+	if( p &amp;lt; -3 || p &gt; 5)&#xD;
+		return 1;&#xD;
+    return 0;&#xD;
+}&#xD;
+return 0;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>68</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if (p % 2 != 0){&#xD;
+		if( p &amp;lt; -3 || p &gt; 5)&#xD;
+			return 1;&#xD;
+		return 0;&#xD;
+	}&#xD;
+	return 1;&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>69</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 1)&#xD;
+return 1;&#xD;
+else return 0;&#xD;
+}</code>
+    <prover>Alt-Ergo</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>70</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 1)&#xD;
+return 1;&#xD;
+else return 0;&#xD;
+}</code>
+    <prover>Alt-Ergo</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>71</logid>
+    <code># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   if(p%2 == 1)&#xD;
+return 1;&#xD;
+else &#xD;
+return 0;&#xD;
+}</code>
+    <prover>Alt-Ergo</prover>
+    <result>UNKNOWN</result>
+  </solution>
+</logs>
+

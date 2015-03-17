@@ -1,0 +1,1733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exlist>
+  <exercise>
+    <exid>1</exid>
+    <problem>Find the absolute value of a real number.</problem>
+    <prototype>#pragma JessieIntegerModel(math)&#xD;
+#pragma JessieFloatModel(math)&#xD;
+/*@ ensures (i &gt;= 0 &amp;amp;&amp;amp; \result == i) || (i &amp;lt; 0 &amp;amp;&amp;amp; \result == -i ); */&#xD;
+float absNumber(float i) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>float absNumber(float i) {&#xD;
+ if (i &amp;lt; 0) return -i;&#xD;
+ else return i;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = -1000;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 1000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>2</exid>
+    <problem>Find the absolute value of a number (pointer version).</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@ &#xD;
+requires \valid(p);&#xD;
+ensures (\old(*p) &gt;= 0 &amp;amp;&amp;amp; *p == \old(*p)) || (\old(*p) &amp;lt; 0 &amp;amp;&amp;amp; -(*p) == \old(*p));&#xD;
+*/&#xD;
+void absPointer(int *p) {&#xD;
+  //TODO&#xD;
+}</prototype>
+    <solution>void absPointer(int *p) {&#xD;
+  if (*p &amp;lt; 0) *p = -*p;&#xD;
+  else *p = *p;&#xD;
+}</solution>
+    <varinit />
+  </exercise>
+  <exercise>
+    <exid>3</exid>
+    <problem>Find the maximum in a pair of 2 real numbers.&#xD;
+float maximum (float x, float y)&#xD;
+-&gt; this method returns the number with the highest value of two specified numbers : x and y.</problem>
+    <prototype>#pragma JessieIntegerModel(math)&#xD;
+#pragma JessieFloatModel(math)&#xD;
+/*@ensures \result == x &amp;amp;&amp;amp; x&gt;=y || \result == y &amp;amp;&amp;amp; y&gt;=x ;*/&#xD;
+float maximum(float x, float y) {&#xD;
+   //TODO&#xD;
+}</prototype>
+    <solution>float maximum(float x, float y) {&#xD;
+    if (x &gt; y) return x;&#xD;
+    else return y;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = -1000;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 1000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>4</exid>
+    <problem>Check whether a given integer is odd or even.&#xD;
+int odd_num(int p)&#xD;
+This method returns 1 if p is an odd number, 0 otherwise.</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@ ensures \result == ((p % 2 == 1 || p % 2 == -1)?1:0);&#xD;
+*/&#xD;
+int oddNumber(int p) {&#xD;
+   //TODO&#xD;
+}</prototype>
+    <solution>int oddNumber(int p) {&#xD;
+   if (p % 2 == 1 || p % 2 == -1) return 1;&#xD;
+   else return 0;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = -1000;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 1000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>5</exid>
+    <problem>Check whether i is divisible by j, given that i and j are 2 integers.&#xD;
+Return 1 if right, 0 otherwise.</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires (j!=0);&#xD;
+ensures \result == (((i%j)==0)?1:0);&#xD;
+*/&#xD;
+int divisible(int i, int j ) {&#xD;
+   //TODO&#xD;
+}</prototype>
+    <solution>int divisible(int i, int j ) {&#xD;
+   if (i % j == 0) return 1;&#xD;
+   else return 0;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = -1000;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 1000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		char * sample_domain = "sample.txt";&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		srandom(time(NULL));&#xD;
+		int i=0;&#xD;
+		int min_domain, max_domain, line_read, total_domain;&#xD;
+		total_domain = count_domain(sample_domain);&#xD;
+		/*printf("Total = %d\n", total_domain);*/&#xD;
+		/* 1 domain will generate 5 testcase, 2 testcase with value min or max, 3 testcase random in domain */&#xD;
+		line_read = 1;&#xD;
+		while (line_read &amp;lt;= total_domain) {&#xD;
+			line_read = extract_domain(sample_domain, &amp;amp;min_domain, &amp;amp;max_domain, line_read);	&#xD;
+			/*printf("%d: %d =&gt; %d\n", line_read, min, max);*/&#xD;
+			Pinit-&gt;array_input[i] = min_domain;&#xD;
+			Pinit-&gt;array_input[i+1] = max_domain;&#xD;
+			Pinit-&gt;array_input[i+2] = random() % (max_domain-min_domain+1) + min_domain;&#xD;
+			Pinit-&gt;array_input[i+3] = random() % (max_domain-min_domain+1) + min_domain;&#xD;
+			Pinit-&gt;array_input[i+4] = random() % (max_domain-min_domain+1) + min_domain;						&#xD;
+			i = i + 5;&#xD;
+			line_read = line_read + 1;&#xD;
+			int k;&#xD;
+			for (k = i - 5; k &amp;lt; i; k++)&#xD;
+				if (Pinit-&gt;array_input[k] == 0) &#xD;
+					// random from 3 to 100&#xD;
+					Pinit-&gt;array_input[k] = random() % (100-3+1) + 3;&#xD;
+		}&#xD;
+		while (i &amp;lt; size) {&#xD;
+			while (1) {&#xD;
+				Pinit-&gt;array_input[i] = random() % (max_default-min_default+1) + min_default;&#xD;
+				if (Pinit-&gt;array_input[i] != 0) {&#xD;
+					// value must be not zero&#xD;
+					int j=0;&#xD;
+					int equals = 0;&#xD;
+					for (j=0; j &amp;lt; i; j++)&#xD;
+						if (Pinit-&gt;array_input[i] == Pinit-&gt;array_input[j]) {&#xD;
+							equals = 1;&#xD;
+							break;&#xD;
+						}&#xD;
+					if (equals == 0)&#xD;
+						break;&#xD;
+				}&#xD;
+			}&#xD;
+			i++;&#xD;
+		}&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>6</exid>
+    <problem>Write a program to convert from METER to INCH.&#xD;
+Hint: As we known, 1 inch = 2,54cm.</problem>
+    <prototype>#pragma JessieIntegerModel(math)&#xD;
+#pragma JessieFloatModel(math)&#xD;
+/*@&#xD;
+requires meter &gt;= 0;&#xD;
+ensures \result == meter / 0.0254;&#xD;
+*/&#xD;
+float convertToInch(int meter) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>float convertToInch(int meter) {&#xD;
+   return meter / 0.0254;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>7</exid>
+    <problem>Write a program to convert from INCH to METER.&#xD;
+Hint: As we known, 1 inch = 2,54cm.</problem>
+    <prototype># pragma JessieFloatModel(math)&#xD;
+# pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires inch &gt;= 0;&#xD;
+ensures \result == (float)inch * 0.0254f;&#xD;
+*/&#xD;
+float convertToMeter(int inch) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>float convertToMeter(int inch) {&#xD;
+   return 0.0254 * inch;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>8</exid>
+    <problem>Write a program for calculating the diameter of a circle with radius r given as input.&#xD;
+math.h isn't allowed.</problem>
+    <prototype># pragma JessieFloatModel(math)&#xD;
+# pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires radius &gt;= 0;&#xD;
+ensures \result == (float)(2*radius);&#xD;
+*/&#xD;
+float diameter(int radius) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>float diameter(int radius) {&#xD;
+   return radius*2;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1000;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>9</exid>
+    <problem>Write a program for calculating the perimeter of a circle with radius r given as input.&#xD;
+math.h isn't allowed. Assume that the PI number is 3.14.</problem>
+    <prototype># pragma JessieFloatModel(math)&#xD;
+# pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires radius &gt;= 0;&#xD;
+ensures \result == (float)(radius*2)*3.14f;&#xD;
+*/&#xD;
+float perimeter(int radius) {&#xD;
+  //TODO&#xD;
+}</prototype>
+    <solution>float perimeter(int radius) {&#xD;
+   return 3.14 * 2*radius;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>10</exid>
+    <problem>Write a program for calculating the area of a circle with radius r given as input.&#xD;
+math.h isn't allowed. Assume that the PI number is 3.14.</problem>
+    <prototype># pragma JessieFloatModel(math)&#xD;
+# pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires radius &gt;= 0;&#xD;
+ensures \result == (float)(radius*radius)*3.14f;&#xD;
+*/&#xD;
+float surface(int radius) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>float surface(int radius) {&#xD;
+  return 3.14*radius*radius;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>11</exid>
+    <problem>Write a program to receive a valid year, verify whether it is a leap year.&#xD;
+Hint : a year is a leap year if this year value could divide by 4 without any remainder.</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires x &gt; 0;&#xD;
+ensures ((x % 4 == 0 &amp;amp;&amp;amp; x % 100 != 0) || x % 400 == 0) &amp;amp;&amp;amp; \result == 1 ||&#xD;
+!((x % 4 == 0 &amp;amp;&amp;amp; x %100 !=0) || x % 400 == 0) &amp;amp;&amp;amp; \result == 0;&#xD;
+*/&#xD;
+int leapYear(int x){&#xD;
+  //TODO&#xD;
+}</prototype>
+    <solution>int leapYear(int x){&#xD;
+  if ((x % 4 == 0 &amp;amp;&amp;amp; x % 100 != 0) || (x % 400 == 0)) return 1;&#xD;
+  else return 0;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>12</exid>
+    <problem>Write a program to calculate electrical fee.&#xD;
+With a given piece wise increasing-linear cost function on the number of kilowatt used per month.</problem>
+    <prototype>#pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires counter &gt;= 0 &amp;amp;&amp;amp; price &gt;= 0;&#xD;
+ensures \result == price*counter || \result == counter*price;&#xD;
+*/&#xD;
+int electricalFee(int counter,int price) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>int electricalFee(int counter,int price) {&#xD;
+   return counter*price;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 0;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 1000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>13</exid>
+    <problem>Write a program to calculate the price for taxi service. &#xD;
+According to four following cases of travel path d :&#xD;
+- d &amp;lt;= 1km : it should be paid 15000VND/km,&#xD;
+- 1km &amp;lt; d &amp;lt;= 10km : it should be paid 8000VND/km,&#xD;
+- 10km &amp;lt; d &amp;lt;= 30km : it should be paid 6000VND/km,&#xD;
+- d &gt;= 30km : it should be paid 4000VND/km.</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires km &gt; 0;&#xD;
+ensures (km &amp;lt;= 1 &amp;amp;&amp;amp; \result == 15000 * km) || &#xD;
+        ((km &gt; 1 &amp;amp;&amp;amp; km &amp;lt;= 10) &amp;amp;&amp;amp; \result == 8000 * km) || &#xD;
+        ((km &gt; 10 &amp;amp;&amp;amp; km &amp;lt;= 30) &amp;amp;&amp;amp; \result == 6000 * km) || &#xD;
+        (km &gt; 30 &amp;amp;&amp;amp; \result == 4000 * km);&#xD;
+*/&#xD;
+int taxiFee(int km)&#xD;
+{&#xD;
+  //TODO&#xD;
+}</prototype>
+    <solution>int taxiFee(int km)&#xD;
+{&#xD;
+   if(km &amp;lt;= 1)&#xD;
+     return 15000 * km;&#xD;
+   else if(km &amp;lt;= 10)&#xD;
+     return 8000 * km;&#xD;
+   else if(km &amp;lt;= 30)&#xD;
+     return 6000 * km;&#xD;
+   else&#xD;
+     return 4000 * km;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>14</exid>
+    <problem>Write a program to calculate the price for taxi service.&#xD;
+According to travel path as follow :&#xD;
+- for the first ten kilometers, it should be paid 10000VND/km,&#xD;
+- from 11th km to 30th km, it should be paid 6000VND/km,&#xD;
+- after 30th km,it should be paid 4000VND/km.</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires km &gt; 0;&#xD;
+ensures (km &amp;lt;= 10 &amp;amp;&amp;amp; \result == 10000*km) || &#xD;
+	(10 &amp;lt; km &amp;lt;= 30 &amp;amp;&amp;amp; \result == (km-10)*6000 + 100000) || &#xD;
+	(30 &amp;lt; km &amp;amp;&amp;amp; \result == (km-30)*4000 + 220000);&#xD;
+*/&#xD;
+int taxiFee(int km) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>int taxiFee(int km) {&#xD;
+   if (km &amp;lt;= 10) return km*10000;&#xD;
+   else if (10 &amp;lt; km &amp;amp;&amp;amp; km &amp;lt;= 30) return 100000 + (km-10)*6000;&#xD;
+   else return 220000 + (km-30)*4000;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>15</exid>
+    <problem>Given three sides a, b, c, verify whether it is a triangle.&#xD;
+The returned result is 1 if it's true, otherwise 0.</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires a &gt; 0 &amp;amp;&amp;amp; b &gt; 0 &amp;amp;&amp;amp; c &gt; 0;&#xD;
+ensures \result == ((a + b &gt; c &amp;amp;&amp;amp; a + c &gt; b &amp;amp;&amp;amp; b + c &gt; a)?1:0 );&#xD;
+*/&#xD;
+int isTriangle(int a, int b, int c ) {&#xD;
+   //TODO&#xD;
+}</prototype>
+    <solution>int isTriangle(int a, int b, int c ) {&#xD;
+   if (a + b &gt; c &amp;amp;&amp;amp; a +c &gt; b &amp;amp;&amp;amp; b + c &gt; a) return 1;&#xD;
+   else return 0;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2, x3)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	int i3 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	:: i3 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i3++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+	x3 = array_input[i3];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>16</exid>
+    <problem>Given three sides a, b, c, which are triangle's edges, verify whether it is an isosceles triangle.&#xD;
+The returned result is 1 if it's true, otherwise 0.</problem>
+    <prototype>/*@&#xD;
+requires a&gt;0 &amp;amp;&amp;amp; b&gt;0 &amp;amp;&amp;amp; c&gt;0 &amp;amp;&amp;amp; a+b&gt;c &amp;amp;&amp;amp; b+c&gt;a &amp;amp;&amp;amp; c+a&gt;b;&#xD;
+ensures \result == ((a==b || a==c || b==c)? 1:0);&#xD;
+*/&#xD;
+int isosceles(int a, int b, int c ) {&#xD;
+  //TODO&#xD;
+}</prototype>
+    <solution>int isosceles(int a, int b, int c ) {&#xD;
+  if (a==b || a==c || b==c) return 1;&#xD;
+  else return 0;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2, x3)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	int i3 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	:: i3 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i3++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+	x3 = array_input[i3];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>17</exid>
+    <problem>Given three sides a, b, c, verify whether it is a right triangle.&#xD;
+The returned result is 1 if it's true, otherwise 0.</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires a&gt;0 &amp;amp;&amp;amp; b&gt;0 &amp;amp;&amp;amp; c&gt;0;&#xD;
+ensures  \result == ((a*a + b*b == c*c  || a*a +c*c == b*b || a*a == b*b + c*c)?1:0);&#xD;
+*/&#xD;
+int rightTriangle(int a, int b, int c ) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>int rightTriangle(int a, int b, int c ) {&#xD;
+   if (a*a + b*b == c*c  || a*a +c*c == b*b || a*a == b*b + c*c) return 1;&#xD;
+   else return 0;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2, x3)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	int i3 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	:: i3 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i3++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+	x3 = array_input[i3];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>18</exid>
+    <problem>Given three sides a, b, c, which are triangle's edges, verify whether it is a equilateral triangle.&#xD;
+The returned result is 1 if it's true, otherwise 0.</problem>
+    <prototype>#pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires a&gt;0 &amp;amp;&amp;amp; b&gt;0 &amp;amp;&amp;amp; c&gt;0 &amp;amp;&amp;amp; a+b&gt;c &amp;amp;&amp;amp; b+c&gt;a &amp;amp;&amp;amp; c+a&gt;b;&#xD;
+ensures \result == ((a==b &amp;amp;&amp;amp; b==c)?1:0);&#xD;
+*/&#xD;
+int equilateralTriangle(int a,int b,int c) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>int equilateralTriangle(int a, int b, int c) {&#xD;
+   if (a == b &amp;amp;&amp;amp; b == c) return 1;&#xD;
+   else return 0;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2, x3)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	int i3 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	:: i3 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i3++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+	x3 = array_input[i3];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>19</exid>
+    <problem>Given three sides a, b, c, which are triangle's edges, verify whether it is an isosceles right triangle.&#xD;
+The returned result is 1 if it's true, otherwise 0.</problem>
+    <prototype>#pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires a&gt;0 &amp;amp;&amp;amp; b&gt;0 &amp;amp;&amp;amp; c&gt;0;&#xD;
+ensures \result == (((a*a + b*b == c*c &amp;amp;&amp;amp; a == b) || &#xD;
+           (b*b + c*c == a*a &amp;amp;&amp;amp; b == c) || &#xD;
+           (c*c + a*a == b*b &amp;amp;&amp;amp; c == a))?1:0);&#xD;
+*/&#xD;
+int isoscelesRightTriangle(int a,int b,int c) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>int isoscelesRightTriangle(int a, int b, int c) {&#xD;
+   if ((a*a + b*b == c*c &amp;amp;&amp;amp; a == b) || (b*b + c*c == a*a &amp;amp;&amp;amp; b == c) || (c*c + a*a == b*b &amp;amp;&amp;amp; c == a)) return 1;&#xD;
+   else return 0;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2, x3)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	int i3 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	:: i3 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i3++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+	x3 = array_input[i3];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>20</exid>
+    <problem>Write a program for calculating perimeter of a triangle with three edges a, b, c given as an input.&#xD;
+math.h isn't allowed.</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+requires a&gt;0 &amp;amp;&amp;amp; b&gt;0 &amp;amp;&amp;amp; c&gt;0 &amp;amp;&amp;amp; a+b&gt;c &amp;amp;&amp;amp; b+c&gt;a &amp;amp;&amp;amp; c+a&gt;b;&#xD;
+ensures \result == a+b+c; */ &#xD;
+int perimeter(int a, int b, int c ) {&#xD;
+  //TODO&#xD;
+}</prototype>
+    <solution>int perimeter(int a, int b, int c ) {&#xD;
+  int p;&#xD;
+  p = a+b+c;&#xD;
+  return p;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2, x3)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	int i3 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	:: i3 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i3++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+	x3 = array_input[i3];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>21</exid>
+    <problem>Find the maximum value in an array of n integer. &#xD;
+Hint : Use loop statement.</problem>
+    <prototype>/*@&#xD;
+requires n&gt;=1 &amp;amp;&amp;amp; \valid_range(t, 0, n - 1);&#xD;
+ensures \forall integer i; 0 &amp;lt;= i &amp;lt; n ==&gt; t[i] &amp;lt;= \result;&#xD;
+*/&#xD;
+int maxArray(int t[], int n){&#xD;
+  int maxValue = t[0];&#xD;
+  int i;&#xD;
+ /*@ loop invariant 0 &amp;lt;= i &amp;lt;= n &amp;amp;&amp;amp; \forall integer k; 0 &amp;lt;= k &amp;lt; i ==&gt; t[k] &amp;lt;= maxValue;&#xD;
+      loop variant n - i; */&#xD;
+  for(i = 1; i &amp;lt; n; i++)&#xD;
+  { &#xD;
+ //TODO&#xD;
+  }&#xD;
+  return maxValue;&#xD;
+}</prototype>
+    <solution>int maxArray(int t[], int n){&#xD;
+  int maxValue = t[0];&#xD;
+  int i;&#xD;
+  for(i = 1; i &amp;lt; n; i++)&#xD;
+  {&#xD;
+     if(t[i] &gt; maxValue) maxValue = t[i];&#xD;
+  }&#xD;
+  return maxValue;&#xD;
+}</solution>
+    <varinit>inline var_init(t, n)&#xD;
+{		&#xD;
+	c_code {&#xD;
+		srandom(time(NULL));&#xD;
+	};&#xD;
+	int NUM_OF_TESTCASE = 1000;&#xD;
+	int SIZE_OF_ARRAY = 10;&#xD;
+	n = SIZE_OF_ARRAY;&#xD;
+	int i=1;&#xD;
+	int temp[10];&#xD;
+	do&#xD;
+	:: i &gt; 1 -&gt; break;&#xD;
+	:: i &amp;lt;= NUM_OF_TESTCASE -&gt; &#xD;
+		c_code {&#xD;
+			int j;&#xD;
+			for (j=0; j &amp;lt; Pinit-&gt;SIZE_OF_ARRAY; j++)&#xD;
+				Pinit-&gt;temp[j] = random() % ( 100 + 100 + 1) - 100; // random -100 -&gt; 100&#xD;
+		};&#xD;
+		int j=0;&#xD;
+		do&#xD;
+		:: j &amp;lt; SIZE_OF_ARRAY -&gt;&#xD;
+			t[j] = temp[j];&#xD;
+			j=j+1;&#xD;
+		:: else -&gt; break;&#xD;
+		od;&#xD;
+		i++;&#xD;
+	od;&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>22</exid>
+    <problem>Find the minimum value in an array of n integer. &#xD;
+Hint : Use loop statement.</problem>
+    <prototype>/*@ requires n&gt;=1 &amp;amp;&amp;amp; \valid_range(t, 0, n - 1);&#xD;
+  @ ensures \forall integer i; 0 &amp;lt;= i &amp;lt; n ==&gt; t[i] &gt;= \result; */&#xD;
+int minArray(int t[], int n){&#xD;
+  int minValue = t[0];&#xD;
+  int i;&#xD;
+  /*@ loop invariant 0 &amp;lt;= i &amp;lt;= n &amp;amp;&amp;amp; \forall integer k; 0 &amp;lt;= k &amp;lt; i ==&gt; t[k] &gt;= minValue;&#xD;
+      loop variant n - i; */&#xD;
+  // you must use parameter named i as the run variable of the loop.&#xD;
+ //TODO&#xD;
+  return minValue;&#xD;
+}</prototype>
+    <solution>int minArray(int t[], int n){&#xD;
+  int minValue = t[0];&#xD;
+  int i;&#xD;
+  for(i = 1; i &amp;lt; n; i++)&#xD;
+  {&#xD;
+     if(t[i] &amp;lt; minValue) minValue = t[i];&#xD;
+  }&#xD;
+  return minValue;&#xD;
+}</solution>
+    <varinit>inline var_init(t, n)&#xD;
+{		&#xD;
+	c_code {&#xD;
+		srandom(time(NULL));&#xD;
+	};&#xD;
+	int NUM_OF_TESTCASE = 1000;&#xD;
+	int SIZE_OF_ARRAY = 10;&#xD;
+	n = SIZE_OF_ARRAY;&#xD;
+	int i=1;&#xD;
+	int temp[10];&#xD;
+	do&#xD;
+	:: i &gt; 1 -&gt; break;&#xD;
+	:: i &amp;lt;= NUM_OF_TESTCASE -&gt; &#xD;
+		c_code {&#xD;
+			int j;&#xD;
+			for (j=0; j &amp;lt; Pinit-&gt;SIZE_OF_ARRAY; j++)&#xD;
+				Pinit-&gt;temp[j] = random() % ( 100 + 100 + 1) - 100; // random -100 -&gt; 100&#xD;
+		};&#xD;
+		int j=0;&#xD;
+		do&#xD;
+		:: j &amp;lt; SIZE_OF_ARRAY -&gt;&#xD;
+			t[j] = temp[j];&#xD;
+			j=j+1;&#xD;
+		:: else -&gt; break;&#xD;
+		od;&#xD;
+		i++;&#xD;
+	od;&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>23</exid>
+    <problem>Swap two elements in the array.</problem>
+    <prototype>/*@&#xD;
+requires \valid_index(t,i) &amp;amp;&amp;amp; \valid_index(t,j); &#xD;
+ensures t[i] == \old(t[j]) &amp;amp;&amp;amp; t[j] == \old(t[i]);&#xD;
+*/&#xD;
+void swap(int t[],int i,int j) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>void swap(int t[],int i,int j) {&#xD;
+   int temp;&#xD;
+   temp=t[j];&#xD;
+   t[j]=t[i];&#xD;
+   t[i]=temp;&#xD;
+}</solution>
+    <varinit />
+  </exercise>
+  <exercise>
+    <exid>24</exid>
+    <problem>Find the result of:&#xD;
+S(n) = 1 - 1.2 + 2.3 - ... + [(-1)^n]*n*(n+1)</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@ axiomatic sa_axiom{&#xD;
+     logic  integer Sa(integer n) ;&#xD;
+     axiom S1: Sa(0) == 1;&#xD;
+     axiom S2:&#xD;
+       	\forall integer i;i%2==1 ==&gt; Sa(i) == Sa(i-1) - i*(i+1);&#xD;
+     axiom S3:&#xD;
+       	\forall integer i;i%2!=1 ==&gt; Sa(i) == Sa(i-1) + i*(i+1);&#xD;
+}&#xD;
+*/&#xD;
+/*@ requires n &gt; 0;&#xD;
+  @ ensures \result == Sa(n);&#xD;
+*/&#xD;
+int sumExpression(int n)&#xD;
+{&#xD;
+  int i = 1;&#xD;
+  int S = 1;&#xD;
+/*@loop invariant 1 &amp;lt;= i &amp;lt;= n+1 &amp;amp;&amp;amp; S == Sa(i-1);&#xD;
+   loop variant n - i;&#xD;
+ */&#xD;
+ // The run variable of the loop must be named i.&#xD;
+ //TODO&#xD;
+  return S;&#xD;
+}</prototype>
+    <solution>int sumExpression(int n)&#xD;
+{&#xD;
+   int i = 1;&#xD;
+   int S = 1;&#xD;
+   for (i = 1; i &amp;lt;= n; i++)&#xD;
+   {&#xD;
+     if(i%2==1)&#xD;
+       S = S - i*(i+1);&#xD;
+     else&#xD;
+       S = S + i*(i+1);&#xD;
+   }&#xD;
+   return S;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>25</exid>
+    <problem>Search for an element in an array.&#xD;
+Return its index if it exists, otherwise, return the size of the array.</problem>
+    <prototype>/*@ requires \valid_range(t,0,n-1);&#xD;
+  @ ensures &#xD;
+  @   (0 &amp;lt;= \result &amp;lt; n ==&gt; t[\result] == v) &amp;amp;&amp;amp;&#xD;
+  @   (\result == n ==&gt; \forall int i; 0 &amp;lt;= i &amp;lt; n ==&gt; t[i] != v) ;&#xD;
+  @*/&#xD;
+int searchIndex(int t[], int n, int v) {&#xD;
+  int i = 0;&#xD;
+  /*@ loop invariant 0 &amp;lt;= i &amp;amp;&amp;amp; \forall integer k; 0 &amp;lt;= k &amp;lt; i ==&gt; t[k] != v;&#xD;
+    @ loop variant n - i; */ &#xD;
+  // The run variable of the loop muset be named i.&#xD;
+ //TODO&#xD;
+  return i;&#xD;
+}</prototype>
+    <solution>int searchIndex(int t[], int n, int v) {&#xD;
+  int i = 0;&#xD;
+  while (i &amp;lt; n) {&#xD;
+    if (t[i] == v) break;&#xD;
+    i++;&#xD;
+  }&#xD;
+  return i;&#xD;
+}</solution>
+    <varinit>inline var_init(t, n, v)&#xD;
+{	&#xD;
+	c_code {&#xD;
+		srandom(time(NULL));&#xD;
+	};&#xD;
+	int NUM_OF_TESTCASE = 1000;&#xD;
+	int SIZE_OF_ARRAY = 10;&#xD;
+	n = SIZE_OF_ARRAY;&#xD;
+	int random_index;&#xD;
+	int i=1;&#xD;
+	int temp[10];&#xD;
+	do&#xD;
+	:: i &gt; 1 -&gt; break;&#xD;
+	:: i &amp;lt;= NUM_OF_TESTCASE -&gt; &#xD;
+		c_code {&#xD;
+			Pinit-&gt;random_index = random() % ( 9 + 1); // random 0 -&gt; 9&#xD;
+			int j;&#xD;
+			for (j=0; j &amp;lt; Pinit-&gt;SIZE_OF_ARRAY; j++)&#xD;
+				Pinit-&gt;temp[j] = random() % ( 100 + 100 + 1) - 100; // random -100 -&gt; 100&#xD;
+		};&#xD;
+		int j=0;&#xD;
+		do&#xD;
+		:: j &amp;lt; 10 -&gt;&#xD;
+			t[j] = temp[j];&#xD;
+			j=j+1;&#xD;
+		:: else -&gt; break;&#xD;
+		od;&#xD;
+		v = t[random_index];&#xD;
+		i++;&#xD;
+	od;&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>26</exid>
+    <problem>Calculate a power n and return the result.</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@ axiomatic pow_axiom{&#xD;
+    logic integer pow_1(integer a, integer n);&#xD;
+    axiom pow1:&#xD;
+      \forall integer a; a &gt; 0 ==&gt; pow_1(a,0) == 1; &#xD;
+    axiom pow2:&#xD;
+      \forall integer a,integer n; a &gt; 0 &amp;amp;&amp;amp; n &gt; 0 ==&gt; pow_1(a,n) == pow_1(a,n-1)*a;&#xD;
+    axiom pow3:&#xD;
+      \forall integer a,integer n; a &gt; 0 &amp;amp;&amp;amp; n &gt; 0 ==&gt; pow_1(a,n) == a*pow_1(a,n-1);&#xD;
+}&#xD;
+*/&#xD;
+/*@ requires a &gt; 0  &amp;amp;&amp;amp; n &gt; 0;&#xD;
+  @ ensures \result == pow_1(a,n);&#xD;
+ */&#xD;
+int calculatePower(int a, int n) {&#xD;
+  int i;&#xD;
+  int kq;&#xD;
+  kq = 1;&#xD;
+ /*@ loop invariant 0 &amp;lt;= i &amp;lt;= n &amp;amp;&amp;amp; kq == pow_1(a,i);&#xD;
+   @ loop variant n - i; */&#xD;
+  // The run variable named i must be use in this loop below.&#xD;
+ //TODO&#xD;
+  return kq;&#xD;
+}</prototype>
+    <solution>int calculatePower(int a, int n) {&#xD;
+   int i;&#xD;
+   int kq;&#xD;
+   kq = 1;&#xD;
+   for (i = 0; i &amp;lt; n; i++)&#xD;
+     kq = a*kq;&#xD;
+   return kq;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 9;&#xD;
+	int array_input[9];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 9;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int i;&#xD;
+		for (i=0; i &amp;lt; 9; i++)&#xD;
+			Pinit-&gt;array_input[i] = i+1;&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>27</exid>
+    <problem>Use Euclid's algorithm to find the greatest common division of two positive integers.&#xD;
+In this exercise, you must use recursion with SUBTRACTION-BASED VERSION of algorithm.</problem>
+    <prototype>/*@axiomatic gcd_axiom{ &#xD;
+logic integer gcd_l(integer n, integer m);&#xD;
+ axiom gcd0:&#xD;
+   \forall integer m; m &gt; 0 ==&gt; gcd_l(0, m) == m;&#xD;
+ axiom gcd1:&#xD;
+   \forall integer n, integer m; n &gt; m ==&gt; gcd_l(n, m) == gcd_l(m,n-m);&#xD;
+ axiom gcd2:&#xD;
+   \forall integer n, integer m; n &amp;lt;= m ==&gt; gcd_l(n, m) == gcd_l(m-n,n);&#xD;
+}&#xD;
+ */&#xD;
+/*@ requires n &gt;= 0 &amp;amp;&amp;amp; m &gt; 0;&#xD;
+  @ ensures \result == gcd_l(n,m);&#xD;
+*/&#xD;
+int greatestCommonDivisor(int n, int m)&#xD;
+{&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>int greatestCommonDivisor(int n, int m)&#xD;
+{&#xD;
+   if(n == 0)&#xD;
+     return m;&#xD;
+   else if(n &gt; m)&#xD;
+     return greatestCommonDivisor(m,n-m);&#xD;
+   else&#xD;
+     return greatestCommonDivisor(m-n,n);&#xD;
+}</solution>
+    <varinit />
+  </exercise>
+  <exercise>
+    <exid>28</exid>
+    <problem>Calculate the factorial of a non-negative integer n with n given as input.&#xD;
+If n is negative, return -1;&#xD;
+In this exercise, you must use LOOP STATEMENT.</problem>
+    <prototype># pragma JessieIntegerModel(math)&#xD;
+/*@ axiomatic fact_axiom{&#xD;
+    logic integer fact(integer x);&#xD;
+    axiom fact_0:&#xD;
+	\forall integer x; x &amp;lt; 0 ==&gt; fact(x) == -1;&#xD;
+    axiom fact_01: &#xD;
+       \forall integer x; (x == 0) ==&gt; fact(x) == 1 ;&#xD;
+    axiom fact_x:&#xD;
+       \forall integer x; x &gt;= 1 ==&gt; ((fact(x) == fact(x - 1) * x) &amp;amp;&amp;amp; (fact(x) == x * fact(x - 1)));&#xD;
+}*/&#xD;
+/*@ ensures  \result == fact(n); */&#xD;
+int factorial(int n) {&#xD;
+  int i;&#xD;
+  int f = 1;&#xD;
+  // in case: n &amp;lt; 0&#xD;
+  //TODO&#xD;
+  // in case: n = 0&#xD;
+  //TODO&#xD;
+  // in case: n &gt; 0&#xD;
+  else {&#xD;
+   /*@ loop invariant&#xD;
+     @ 1 &amp;lt;= i &amp;lt;= n + 1 &amp;amp;&amp;amp; f == fact(i - 1);&#xD;
+     @ loop variant n - i; */&#xD;
+   // you must use parameter named i as the run variable of the loop. &#xD;
+ //TODO&#xD;
+    return f;&#xD;
+  }&#xD;
+}</prototype>
+    <solution>int factorial(int n) {&#xD;
+  int i;&#xD;
+  int f = 1;&#xD;
+  if(n &amp;lt; 0) return -1;&#xD;
+  if(n==0) return 1;&#xD;
+  else {&#xD;
+    for(i=1;i &amp;lt;= n;i++)&#xD;
+      f*=i;&#xD;
+    return f;&#xD;
+  }&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 20;&#xD;
+	int array_input[20];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = -5;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 10;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>29</exid>
+    <problem>Calculate a factorial of a positive integer n with n given as an input.&#xD;
+Hint : there are 3 cases : n &amp;lt; 0, n = 0, n &gt; 0.&#xD;
+In this exercise, you must use RECURSION.</problem>
+    <prototype>#pragma JessieIntegerModel(math)&#xD;
+/*@ axiomatic fact_axiom{&#xD;
+    logic integer fact(integer x);&#xD;
+    axiom fact_0:&#xD;
+       \forall integer x; x &amp;lt; 0 ==&gt; fact(x) == -1;&#xD;
+    axiom fact_01: &#xD;
+       \forall integer x; (x == 0)==&gt;fact(x) == 1 ;&#xD;
+    axiom fact_x:&#xD;
+       \forall integer x; x &gt;= 1 ==&gt; ((fact(x) == fact(x - 1) * x) &amp;amp;&amp;amp; (fact(x) == x * fact(x - 1)));&#xD;
+}&#xD;
+*/&#xD;
+/*@&#xD;
+decreases n;&#xD;
+ensures \result == fact(n);&#xD;
+*/&#xD;
+int factorial(int n) {&#xD;
+ //TODO&#xD;
+}</prototype>
+    <solution>int factorial(int n) {&#xD;
+   if(n &amp;lt; 0)&#xD;
+     return -1;&#xD;
+   if(n == 0)&#xD;
+     return 1;&#xD;
+   else &#xD;
+     return n * factorial(n - 1);&#xD;
+}</solution>
+    <varinit />
+  </exercise>
+  <exercise>
+    <exid>30</exid>
+    <problem>Binary Search.&#xD;
+binarySearch(t,n,v) searchs for element v in array t between index 0 and n-1&#xD;
+Assume that array t is sorted in increasing order.&#xD;
+Return an index i between 0 and n-1 where t[i] equals v, or -1 if no element of t is equal to v.</problem>
+    <prototype>/*@ lemma mean : \forall integer x, y; x &amp;lt;= y ==&gt; x &amp;lt;= (x+y)/2 &amp;lt;= y; */&#xD;
+/*@ requires n &gt;= 0 &amp;amp;&amp;amp; \valid_range(t,0,n-1);&#xD;
+  @ ensures -1 &amp;lt;= \result &amp;lt;= n-1;&#xD;
+*/&#xD;
+int binarySearch(int* t, int n, int v) {&#xD;
+int l = 0, u = n-1;&#xD;
+/*@ loop invariant 0 &amp;lt;= l &amp;amp;&amp;amp; u &amp;lt;= n-1;&#xD;
+  @ loop variant u-l;&#xD;
+*/&#xD;
+  while (l &amp;lt;= u) {&#xD;
+  //TODO&#xD;
+  }&#xD;
+  return -1;&#xD;
+}</prototype>
+    <solution>int binarySearch(int* t, int n, int v) {&#xD;
+  int l = 0, u = n-1;&#xD;
+  while (l &amp;lt;= u) {&#xD;
+    int m = (l + u) / 2;&#xD;
+    if (t[m] &amp;lt; v) l = m + 1;&#xD;
+    else if (t[m] &gt; v) u = m - 1;&#xD;
+    else return m; &#xD;
+  }&#xD;
+  return -1;&#xD;
+}</solution>
+    <varinit />
+  </exercise>
+  <exercise>
+    <exid>31</exid>
+    <problem>Bubble sort, Gnome sort, Shaker sort, Selection sort, Insertion sort, Shell sort.&#xD;
+* When using the structure as if, if ... else, for, while, do ... while, &#xD;
+the new block must be created explicitly, even in cases only one statement goes after these structure.&#xD;
+* For Shell sort : initially, k must be N/2 and for each iteration, k must be updated as k = k/2.</problem>
+    <prototype>void sort(int a[], int n)&#xD;
+{&#xD;
+  //TODO&#xD;
+}</prototype>
+    <solution />
+    <varinit />
+  </exercise>
+  <exercise>
+    <exid>32</exid>
+    <problem>Heap sort, Merge sort, Quick sort.&#xD;
+* Writing additional function is arbitrary, but the name of the array in all functions must be 'a'.&#xD;
+* When using the structure as if, if ... else, for, while, do ... while, &#xD;
+the new block must be created explicitly, even in cases only one statement goes after these structure.&#xD;
+* For Merge sort : the temporary array in this algorithm must be declared as a static array.&#xD;
+* For Quick sort : the pivot must be a[left] or a[right].</problem>
+    <prototype>//TODO&#xD;
+void sort(int a[], int n)&#xD;
+{&#xD;
+  //TODO&#xD;
+}</prototype>
+    <solution />
+    <varinit />
+  </exercise>
+  <exercise>
+    <exid>33</exid>
+    <problem>Give two sides b and c of a right triangle.&#xD;
+Find squared length of the altitude which is drawn from the vertex with the right angle to the hypotenuse.</problem>
+    <prototype># pragma JessieFloatModel(math)&#xD;
+# pragma JessieIntegerModel(math)&#xD;
+/*@&#xD;
+	requires b &gt; 0 &amp;amp;&amp;amp; c &gt; 0;&#xD;
+	ensures \result == \pow(b,2) * \pow(c,2) / ( \pow(b,2) + \pow(c,2)) ;&#xD;
+*/&#xD;
+float squareOfHeight( int b , int c ){&#xD;
+	//TODO&#xD;
+}</prototype>
+    <solution>float squareOfHeight( int b , int c ){&#xD;
+  float area  = (b*c) / 2.0;&#xD;
+  area= area * area;&#xD;
+  float a2 =b*b+c*c;&#xD;
+  return 4.0*area / a2;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>34</exid>
+    <problem>Given 3 2D-point A(x1,x2) , B(x2,y2) , C(x3,y3). Find out that whether A,B,C are collinear.&#xD;
+Implement a method takes x1,y1,x2,y2,x3,y3 as parameter and return 1 if A,B,C are collinear , otherwise return 0.</problem>
+    <prototype>#pragma JessieIntegerModel(math)&#xD;
+#pragma JessieFloatModel(math)&#xD;
+/*@&#xD;
+	ensures \result == 1 &amp;amp;&amp;amp; (x2-x1)*(y3-y1) - (x3-x1)*(y2-y1) == 0|| \result == 0 &amp;amp;&amp;amp; (x2-x1)*(y3-y1) - (x3-x1)*(y2-y1) != 0;&#xD;
+*/&#xD;
+int isCollinear(float x1 , float y1 , float x2 , float y2 , float x3 , float y3){&#xD;
+	//TODO&#xD;
+}</prototype>
+    <solution>int isCollinear(float x1 , float y1 , float x2 , float y2 , float x3 , float y3){&#xD;
+	float a = y1-y2;&#xD;
+	float b = x2-x1;&#xD;
+	float c = a*x1+b*y1;&#xD;
+	if (a*x3+b*y3==c) return 1;&#xD;
+	else return 0;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2, x3, x4, x5, x6)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	int i3 = 0;	&#xD;
+	int i4 = 0;&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	:: i3 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i3++;&#xD;
+	:: i4 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i4++;&#xD;
+	:: i5 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i5++;&#xD;
+	:: i6 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i6++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+	x3 = array_input[i3];&#xD;
+	x4 = array_input[i4];&#xD;
+	x5 = array_input[i5];&#xD;
+	x6 = array_input[i6];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>35</exid>
+    <problem>Given a, b, c are the sides of a right triangle (a is the hypotenuse). Find the squared area of that triangle.</problem>
+    <prototype>#pragma JessieIntegerModel(math)&#xD;
+#pragma JessieFloatModel(math)&#xD;
+/*@&#xD;
+        requires a&gt;0 &amp;amp;&amp;amp; b&gt;0 &amp;amp;&amp;amp; c&gt;0 &amp;amp;&amp;amp; a+b&gt;c &amp;amp;&amp;amp; a+c&gt;b &amp;amp;&amp;amp; b+c&gt;a &amp;amp;&amp;amp; a*a==b*b+c*c;&#xD;
+        ensures \result ==\pow((b*c)/2.0,2);&#xD;
+*/&#xD;
+float   squaredArea(float  a, float b, float c){&#xD;
+       //TODO&#xD;
+}</prototype>
+    <solution>float   squaredArea(float  a, float b, float c){&#xD;
+        float p = (a+b+c)/2;&#xD;
+        return p*(p-a)*(p-b)*(p-c);&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2, x3)&#xD;
+{&#xD;
+    /* NEW RANDOM ON DOMAIN */&#xD;
+    /*Size of random input array*/&#xD;
+    int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+    int array_input[100];&#xD;
+    /*Value random from MIN to MAX*/&#xD;
+    int MIN_VALUE_RANDOM_INPUT = 100;&#xD;
+    int MAX_VALUE_RANDOM_INPUT = 500;&#xD;
+    /*Create random input array*/&#xD;
+    c_code {&#xD;
+        int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+        int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+        int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+        create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+    };&#xD;
+    /*Assign random value in array to input variable*/&#xD;
+    int i1 = 0;   &#xD;
+    int i2 = 0;   &#xD;
+    int i3 = 0;   &#xD;
+    do       &#xD;
+    :: break;&#xD;
+    :: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+    :: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+    :: i3 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i3++;&#xD;
+    od;&#xD;
+    x1 = array_input[i1];&#xD;
+    x2 = array_input[i2];&#xD;
+    x3 = array_input[i3];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>36</exid>
+    <problem>Problem Statement:&#xD;
+The Admin of Prove site will have an important meeting with his friends this weekend. He has to travel from his house at C(7.4,4.7) to meeting location at point D(xD,yD) on map in straight-line direction. In area that he 's living, there is a canal that is a line segment from point A(0,0) to point B(47.4,74.7) on the map. Unfortunately, there 's no bridges across the canal. The only way to get across the canal is to swim across it or you have to find another route. The Admin likes swimming very much so that he will get across the canal by swimming. He wonders that whether he must take a swimming-suit on his trip.&#xD;
+Your task is to write isIntersected method that take two real numbers xD,yD and return 1 if line segment CD and AB intersects , otherwise return 0. Suppose that no three points are collinear.</problem>
+    <prototype>#pragma JessieIntegerModel(math)&#xD;
+#pragma JessieFloatModel(math)&#xD;
+/*@&#xD;
+	requires (0.0-0.0)*(4.7-0.0)-(7.4-0.0)*(74.7-0.0)!=0 &amp;amp;&amp;amp; (0.0-0.0)*(yD-0.0)-(xD-0.0)*(74.7-0.0)!=0 &amp;amp;&amp;amp; (0.0-xD)*(4.7-yD)-(7.4-xD)*(0.0-yD)!=0 &amp;amp;&amp;amp;(0.0-xD)*(4.7-yD)-(7.4-xD)*(74.7-yD)!=0;&#xD;
+	ensures \result == 1 &amp;amp;&amp;amp; (((0.0-0.0)*(4.7-0.0)-(7.4-0.0)*(74.7-0.0))*((0.0-0.0)*(yD-0.0)-(xD-0.0)*(74.7-0.0)) &amp;lt; 0 &amp;amp;&amp;amp;((0.0-xD)*(4.7-yD)-(7.4-xD)*(0.0-yD))*((0.0-xD)*(4.7-yD)-(7.4-xD)*(74.7-yD)) &amp;lt; 0)||\result == 0 &amp;amp;&amp;amp; !(((0.0-0.0)*(4.7-0.0)-(7.4-0.0)*(74.7-0.0))*((0.0-0.0)*(yD-0.0)-(xD-0.0)*(74.7-0.0)) &amp;lt; 0 &amp;amp;&amp;amp;((0.0-xD)*(4.7-yD)-(7.4-xD)*(0.0-yD))*((0.0-xD)*(4.7-yD)-(7.4-xD)*(74.7-yD)) &amp;lt; 0) ;&#xD;
+*/&#xD;
+int isIntersected ( float xD, float yD){&#xD;
+//TODO&#xD;
+}</prototype>
+    <solution>int isIntersected ( float xD, float yD){&#xD;
+	float a1 = 0.0 - 74.7;&#xD;
+	float b1 = 0.0 - 0.0 ;&#xD;
+	float c1 = a1 * 0.0 +b1 * 0.0;&#xD;
+	float a2 = 4.7 - yD ;&#xD;
+	float b2 = xD - 7.4 ;&#xD;
+	float c2 = a2 * 7.4 + b2 * 4.7 ;&#xD;
+	if (a1*b2 - a2*b1 == 0) return 0;&#xD;
+	float iX = (c1*b2-c2*b1)/(a1*b2-a2*b1);&#xD;
+	float iY = (c1*a2-c2*a1)/(b1*a2-a1*b2);&#xD;
+	float minXAB;&#xD;
+        float maxXAB;&#xD;
+        float minYAB;&#xD;
+        float maxYAB;&#xD;
+	float minXCD;&#xD;
+        float maxXCD;&#xD;
+        float minYCD;&#xD;
+        float maxYCD;&#xD;
+	minXAB=0.0;&#xD;
+	maxXAB=0.0;&#xD;
+	minYAB=0.0;&#xD;
+	maxYAB=74.7;&#xD;
+	minXCD =7.4;&#xD;
+	maxXCD = xD;	&#xD;
+	minYCD = 4.7;&#xD;
+	maxYCD = yD;&#xD;
+	/*if (0.0 &amp;lt; 0.0) {&#xD;
+		minXAB=0.0;&#xD;
+		maxXAB=0.0;&#xD;
+	}else{&#xD;
+		minXAB=0.0;&#xD;
+		maxXAB=0.0;&#xD;
+	}&#xD;
+	if(0.0 &amp;lt; 74.7){&#xD;
+		minYAB =0.0 ;&#xD;
+		maxYAB =74.7;&#xD;
+	}else{&#xD;
+		minYAB =74.7 ;&#xD;
+		maxYAB =0.0;&#xD;
+	}*/&#xD;
+	if (7.4 &amp;lt; xD){&#xD;
+		minXCD = 7.4;&#xD;
+		maxXCD = xD;&#xD;
+	}else{	&#xD;
+		minXCD = xD;&#xD;
+		maxXCD = 7.4;&#xD;
+	}&#xD;
+	if (4.7 &amp;lt; yD){&#xD;
+		minYCD = 4.7;&#xD;
+		maxYCD = yD;&#xD;
+	}else{&#xD;
+		minYCD = yD;&#xD;
+		maxYCD = 4.7;&#xD;
+	}&#xD;
+	if ( (minXAB &amp;lt;= iX &amp;amp;&amp;amp; iX &amp;lt;= maxXAB &amp;amp;&amp;amp; minYAB &amp;lt;= iY &amp;amp;&amp;amp; iY &amp;lt;= maxYAB)	&#xD;
+	     &amp;amp;&amp;amp;(minXCD &amp;lt;= iX &amp;amp;&amp;amp; iX &amp;lt;= maxXCD &amp;amp;&amp;amp; minYCD &amp;lt;= iY &amp;amp;&amp;amp; iY &amp;lt;= maxYCD) )&#xD;
+		return 1;&#xD;
+	else&#xD;
+		return 0;&#xD;
+}</solution>
+    <varinit>inline var_init(x1, x2)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	int i2 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	:: i2 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i2++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+	x2 = array_input[i2];&#xD;
+}</varinit>
+  </exercise>
+  <exercise>
+    <exid>37</exid>
+    <problem>Convert from fahrenheit degree to celsius degree.</problem>
+    <prototype>#pragma JessieIntegerModel(math)&#xD;
+#pragma JessieFloatModel(math)&#xD;
+/*@&#xD;
+ensures \result == (f - 32.0f) * 5.0f / 9.0f;&#xD;
+*/&#xD;
+float f2c(float f) {&#xD;
+  //TODO&#xD;
+}</prototype>
+    <solution>float f2c(float f) {&#xD;
+  //TODO&#xD;
+  return (f - 32.0) * 5.0 / 9.0;&#xD;
+}</solution>
+    <varinit>inline var_init(x1)&#xD;
+{&#xD;
+	/* NEW RANDOM ON DOMAIN */&#xD;
+	/*Size of random input array*/&#xD;
+	int SIZE_OF_ARRAY_INPUT = 100;&#xD;
+	int array_input[100];&#xD;
+	/*Value random from MIN to MAX*/&#xD;
+	int MIN_VALUE_RANDOM_INPUT = 1;&#xD;
+	int MAX_VALUE_RANDOM_INPUT = 5000;	&#xD;
+	/*Create random input array*/&#xD;
+	c_code {&#xD;
+		int min_default = Pinit-&gt;MIN_VALUE_RANDOM_INPUT;&#xD;
+		int max_default = Pinit-&gt;MAX_VALUE_RANDOM_INPUT;&#xD;
+		int size = Pinit-&gt;SIZE_OF_ARRAY_INPUT;&#xD;
+		create_array_input("sample.txt", min_default, max_default, Pinit-&gt;array_input, size);&#xD;
+	};&#xD;
+	/*Assign random value in array to input variable*/&#xD;
+	int i1 = 0;	&#xD;
+	do		&#xD;
+	:: break;&#xD;
+	:: i1 &amp;lt; SIZE_OF_ARRAY_INPUT-1 -&gt; i1++;&#xD;
+	od;&#xD;
+	x1 = array_input[i1];&#xD;
+}</varinit>
+  </exercise>
+<exercise>
+<exid>38</exid>
+<problem>Bubble sort, using GroupTesting.</problem>
+<prototype>int* sort(int n, int a[])
+ {
+ //TODO
+ }</prototype>
+<solution>
+int* sort(int n, int a[])
+ {
+ //TODO
+ int i = n - 1;
+ while (i > 0) {
+ int j = 0;
+ while (j &lt; i) {
+ if (a[j] > a[j + 1]) {
+ int temp = a[j];
+ a[j] = a[j + 1];
+ a[j + 1] = temp;
+ }	
+ j = j + 1;
+ }
+ i = i - 1;
+ }
+ return a;
+ }
+</solution>
+<varinit/>
+</exercise>
+</exlist>
+

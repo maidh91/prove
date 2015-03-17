@@ -1,0 +1,22 @@
+
+<div id='verifycode'>
+<pre>
+NONE<br>
+</pre>
+</div>
+<div id='counterexample'>
+<br>
+COUNTER EXAMPLE:<br>
+<br>
+Value of input:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	x = -100<br>
+Value of input:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	y = -100<br>
+Line 3: If statement <a href='#' onclick='show("1"); return false;' id='img1' class='buttonplus'>&nbsp;&nbsp;&nbsp;&nbsp;</a><br>
+<div class='hidecode' id='1'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Line 3: [x > y] = false<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Line 5: else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Line 6: return 9.8;<br>
+</div>
+</div>
+<br>

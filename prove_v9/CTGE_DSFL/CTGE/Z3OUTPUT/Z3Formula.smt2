@@ -1,0 +1,5 @@
+(declare-const i  Real)
+(assert (< i 0.0))
+(assert )
+(check-sat)
+(model)

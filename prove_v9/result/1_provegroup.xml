@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logs>
+  <solution>
+    <logid>1</logid>
+    <code>#pragma JessieIntegerModel(math)&#xD;
+#pragma JessieFloatModel(math)&#xD;
+/*@ ensures (i &gt;= 0 &amp;amp;&amp;amp; \result == i) || (i &amp;lt; 0 &amp;amp;&amp;amp; \result == -i ); */&#xD;
+float absNumber(float i) {&#xD;
+ if(i&gt;0){return -i;}&#xD;
+else{return -i;}&#xD;
+}</code>
+    <prover>REDLOG</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>2</logid>
+    <code>#pragma JessieIntegerModel(math)&#xD;
+#pragma JessieFloatModel(math)&#xD;
+/*@ ensures (i &gt;= 0 &amp;amp;&amp;amp; \result == i) || (i &amp;lt; 0 &amp;amp;&amp;amp; \result == -i ); */&#xD;
+float absNumber(float i) {&#xD;
+ if(i&gt;10)&#xD;
+return 100;&#xD;
+}</code>
+    <prover>Alt-Ergo</prover>
+    <result>UNKNOWN</result>
+  </solution>
+  <solution>
+    <logid>3</logid>
+    <code>#pragma JessieIntegerModel(math)&#xD;
+#pragma JessieFloatModel(math)&#xD;
+/*@ ensures (i &gt;= 0 &amp;amp;&amp;amp; \result == i) || (i &amp;lt; 0 &amp;amp;&amp;amp; \result == -i ); */&#xD;
+float absNumber(float i) {&#xD;
+ if(i&gt;1000)&#xD;
+return 100;&#xD;
+else&#xD;
+return 10;&#xD;
+}</code>
+    <prover>Alt-Ergo</prover>
+    <result>UNKNOWN</result>
+  </solution>
+</logs>
+

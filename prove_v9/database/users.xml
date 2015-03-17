@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<staff>
+  <user>
+    <userid>0</userid>
+    <username>admin</username>
+    <pwd>d865b63643bc6111e59334d7743a83af</pwd>
+    <role>admin</role>
+  </user>
+  <user>
+    <userid>1</userid>
+    <username>teacher</username>
+    <pwd>801f0ea4bf7cff9d5cc3390b67dd4292</pwd>
+    <role>teacher</role>
+  </user>
+</staff>
+

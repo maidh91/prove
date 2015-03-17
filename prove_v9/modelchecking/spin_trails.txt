@@ -1,0 +1,132 @@
+  1:	proc  0 (:init:) line  16 "verify.spin" (state 12)	[  int min_default = Pinit->MIN_VALUE_RANDOM_INPUT;
+  int max_default = Pinit->MAX_VALUE_RANDOM_INPUT;
+  int size = Pinit->SIZE_OF_ARRAY_INPUT;
+  create_array_input("sample.txt", min_default, max_default, Pinit->array_input, size);
+ ]
+  2:	proc  0 (:init:) line  21 "verify.spin" (state 7)	[goto :b0]
+  3:	proc  0 (:init:) line  21 "verify.spin" (state 13)	[(run m_maximum(m1_x_f_1,m1_y_f_1,c))]
+  4:	proc  1 (m_maximum) line   3 "verify.spin" (state 1)	[(1)]
+  5:	proc  1 (m_maximum) line   5 "verify.spin" (state 8)	[else]
+  6:	proc  1 (m_maximum) line   8 "verify.spin" (state 6)	[c!(98/10)]
+  7:	proc  1 (m_maximum) line  10 "verify.spin" (state 10)	[(1)]
+  8:	proc  1 (m_maximum) line   0 "verify.spin" (state 0)	[-end-]
+  9:	proc  0 (:init:) line  22 "verify.spin" (state 14)	[c?obtainedResult]
+ 10:	proc  0 (:init:) line  27 "verify.spin" (state 15)	[  Pinit-> desiredResult = maximum(Pinit->m1_x_f_1, Pinit->m1_y_f_1);
+ ]
+pan: assertion violated (obtainedResult==desiredResult) (at depth 11)
+spin: trail ends after 11 steps
+#processes 1:
+ 11:	proc 0 (:init:)  line  28 (state 16) (invalid end state)
+		assert((obtainedResult==desiredResult))
+global vars:
+local vars proc 0 (:init:):
+	int    m1_x_f_1:	-1000
+	int    m1_y_f_1:	-1000
+	chan c (=1):	len 0:	
+	int    SIZE_OF_ARRAY_INPUT:	100
+	int    array_input[0]:	-1000
+	int    array_input[1]:	1000
+	int    array_input[2]:	-619
+	int    array_input[3]:	286
+	int    array_input[4]:	37
+	int    array_input[5]:	135
+	int    array_input[6]:	-77
+	int    array_input[7]:	568
+	int    array_input[8]:	-400
+	int    array_input[9]:	573
+	int    array_input[10]:	-35
+	int    array_input[11]:	634
+	int    array_input[12]:	-503
+	int    array_input[13]:	745
+	int    array_input[14]:	471
+	int    array_input[15]:	399
+	int    array_input[16]:	605
+	int    array_input[17]:	-319
+	int    array_input[18]:	130
+	int    array_input[19]:	662
+	int    array_input[20]:	469
+	int    array_input[21]:	754
+	int    array_input[22]:	107
+	int    array_input[23]:	893
+	int    array_input[24]:	-716
+	int    array_input[25]:	629
+	int    array_input[26]:	-491
+	int    array_input[27]:	-676
+	int    array_input[28]:	-755
+	int    array_input[29]:	-970
+	int    array_input[30]:	955
+	int    array_input[31]:	-141
+	int    array_input[32]:	-588
+	int    array_input[33]:	240
+	int    array_input[34]:	896
+	int    array_input[35]:	104
+	int    array_input[36]:	-837
+	int    array_input[37]:	463
+	int    array_input[38]:	105
+	int    array_input[39]:	-680
+	int    array_input[40]:	-407
+	int    array_input[41]:	627
+	int    array_input[42]:	954
+	int    array_input[43]:	90
+	int    array_input[44]:	371
+	int    array_input[45]:	424
+	int    array_input[46]:	-955
+	int    array_input[47]:	-468
+	int    array_input[48]:	176
+	int    array_input[49]:	752
+	int    array_input[50]:	131
+	int    array_input[51]:	-71
+	int    array_input[52]:	-585
+	int    array_input[53]:	23
+	int    array_input[54]:	-230
+	int    array_input[55]:	-957
+	int    array_input[56]:	89
+	int    array_input[57]:	95
+	int    array_input[58]:	847
+	int    array_input[59]:	120
+	int    array_input[60]:	49
+	int    array_input[61]:	-295
+	int    array_input[62]:	-711
+	int    array_input[63]:	-843
+	int    array_input[64]:	-808
+	int    array_input[65]:	-991
+	int    array_input[66]:	178
+	int    array_input[67]:	-146
+	int    array_input[68]:	-671
+	int    array_input[69]:	771
+	int    array_input[70]:	-962
+	int    array_input[71]:	840
+	int    array_input[72]:	-583
+	int    array_input[73]:	409
+	int    array_input[74]:	263
+	int    array_input[75]:	-537
+	int    array_input[76]:	499
+	int    array_input[77]:	-75
+	int    array_input[78]:	639
+	int    array_input[79]:	250
+	int    array_input[80]:	613
+	int    array_input[81]:	-876
+	int    array_input[82]:	665
+	int    array_input[83]:	-365
+	int    array_input[84]:	-105
+	int    array_input[85]:	265
+	int    array_input[86]:	724
+	int    array_input[87]:	990
+	int    array_input[88]:	111
+	int    array_input[89]:	-600
+	int    array_input[90]:	-405
+	int    array_input[91]:	373
+	int    array_input[92]:	46
+	int    array_input[93]:	-559
+	int    array_input[94]:	531
+	int    array_input[95]:	-204
+	int    array_input[96]:	-550
+	int    array_input[97]:	-292
+	int    array_input[98]:	207
+	int    array_input[99]:	-664
+	int    MIN_VALUE_RANDOM_INPUT:	-1000
+	int    MAX_VALUE_RANDOM_INPUT:	1000
+	int    i1:	0
+	int    i2:	0
+	int    obtainedResult:	9
+	int    desiredResult:	-10
